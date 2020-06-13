@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import '../screens/signup_screen.dart';
+import '../screens/login_screen.dart';
 import '../widgets/slide_dots.dart';
 import 'dart:async';
 import '../model/slide.dart';
@@ -99,13 +101,20 @@ class _GettingStartedScreenState extends State<GettingStartedScreen> {
                 padding: const EdgeInsets.all(15),
                 color: Theme.of(context).primaryColor,
                 textColor: Colors.white,
-                onPressed: () { },
+                onPressed: () {
+                  Navigator.of(context).pushNamed(SignupScreen.routeName);
+                },
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                   Text('Have an account?', style: TextStyle(fontSize: 18),),
-                  FlatButton(child: Text('Log In', style: TextStyle(fontSize: 18),),),
+                  FlatButton(
+                    child: Text('Log In', style: TextStyle(fontSize: 18),),
+                  onPressed: () {
+                      Navigator.of(context).pushNamed(LoginScreen.routeName);
+                  },
+                  ),
                 ],)
               ],)
             ],

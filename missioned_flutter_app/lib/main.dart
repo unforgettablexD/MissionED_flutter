@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import './screens/signup_screen.dart';
+import './screens/login_screen.dart';
 
 import './screens/getting_started_screen.dart';
 
@@ -16,6 +18,10 @@ class MyApp extends StatelessWidget {
         primaryColor: Colors.blue,
       ),
       home: GettingStartedScreen(),
+      routes: {
+        LoginScreen.routeName: (context) => LoginScreen(),
+        SignupScreen.routeName: (ctx) => SignupScreen(),
+      },
     );
 
   }
