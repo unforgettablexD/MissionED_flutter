@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../screens/login_screen.dart';
 
 class SignupScreen extends StatelessWidget {
   static const routeName = '/signup';
@@ -127,6 +128,27 @@ class SignupScreen extends StatelessWidget {
                       decoration: InputDecoration(
                         filled: true,
                         fillColor: Colors.white,
+                        hintText: 'Mobile Number',
+                        contentPadding: const EdgeInsets.all(15),
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.white),
+                          borderRadius: BorderRadius.circular(5),
+                        ),
+                        enabledBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(color: Colors.white),
+                          borderRadius: BorderRadius.circular(5),
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    TextField(
+                      obscureText: true,
+                      style: TextStyle(fontSize: 18, color: Colors.black54),
+                      decoration: InputDecoration(
+                        filled: true,
+                        fillColor: Colors.white,
                         hintText: 'Class (8-12)',
                         contentPadding: const EdgeInsets.all(15),
                         focusedBorder: OutlineInputBorder(
@@ -155,7 +177,9 @@ class SignupScreen extends StatelessWidget {
                       ),
                       padding: const EdgeInsets.all(15),
                       textColor: Colors.white,
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.of(context).pushNamed(LoginScreen.routeName);
+                      },
                     ),
                   ],
                 ),
