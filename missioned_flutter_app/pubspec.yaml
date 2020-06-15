@@ -47,15 +47,11 @@ flutter:
   assets:
     - assets/mission_ed.png
     - assets/output-onlinepngtools (88).png
-<<<<<<< HEAD
     - assets/blank_profile_pic.png
     - assets/images/blank_profile_pic.png
-=======
     - assets/onboarding1.png
     - assets/onboarding2.png
     - assets/onboarding3.png
-
->>>>>>> origin/master
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
   # For details regarding adding assets from package dependencies, see

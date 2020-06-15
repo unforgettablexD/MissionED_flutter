@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import './screens/signup_screen.dart';
 import './screens/login_screen.dart';
+import './screens/getting_started_screen.dart';
 
-<<<<<<< HEAD
 void main() {
   runApp(new MaterialApp(
     debugShowCheckedModeBanner: false,
@@ -14,45 +14,28 @@ void main() {
   ));
 }
 
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'MissionED',
-      theme: ThemeData(
-        primaryColor: Colors.indigo,
-      ),
-      home: introduction1(),
-    );
-  }
-}
-
 class introduction1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("MissionED"),
-      ),
-      body: new Container(
-        child: new Center(
-          child: new Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              new Text("Introduction page 1"),
-              new RaisedButton(onPressed: () {
-                Navigator.of(context).pushNamed("/intro2");
-              })
-            ],
-          ),
+        appBar: AppBar(
+          title: Text("MissionED"),
         ),
-=======
-import './screens/getting_started_screen.dart';
-
-
-
-void main() =>runApp(MyApp());
+        body: new Container(
+          child: new Center(
+            child: new Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                new Text("Introduction page 1"),
+                new RaisedButton(onPressed: () {
+                  Navigator.of(context).pushNamed("/intro2");
+                })
+              ],
+            ),
+          ),
+        ));
+  }
+}
 
 class MyApp extends StatelessWidget {
   @override
@@ -62,7 +45,6 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primaryColor: Colors.blue,
->>>>>>> origin/master
       ),
       home: GettingStartedScreen(),
       routes: {
@@ -70,7 +52,6 @@ class MyApp extends StatelessWidget {
         SignupScreen.routeName: (ctx) => SignupScreen(),
       },
     );
-<<<<<<< HEAD
   }
 }
 
@@ -164,9 +145,4 @@ class introduction3 extends StatelessWidget {
       ),
     );
   }
-=======
-
-  }
-
->>>>>>> origin/master
 }
