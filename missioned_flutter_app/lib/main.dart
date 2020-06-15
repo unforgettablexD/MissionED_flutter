@@ -1,7 +1,8 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:splashscreen/splashscreen.dart';
+import './screens/signup_screen.dart';
+import './screens/login_screen.dart';
 
+<<<<<<< HEAD
 void main() {
   runApp(new MaterialApp(
     debugShowCheckedModeBanner: false,
@@ -46,8 +47,30 @@ class introduction1 extends StatelessWidget {
             ],
           ),
         ),
+=======
+import './screens/getting_started_screen.dart';
+
+
+
+void main() =>runApp(MyApp());
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'MissionED',
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primaryColor: Colors.blue,
+>>>>>>> origin/master
       ),
+      home: GettingStartedScreen(),
+      routes: {
+        LoginScreen.routeName: (context) => LoginScreen(),
+        SignupScreen.routeName: (ctx) => SignupScreen(),
+      },
     );
+<<<<<<< HEAD
   }
 }
 
@@ -141,4 +164,9 @@ class introduction3 extends StatelessWidget {
       ),
     );
   }
+=======
+
+  }
+
+>>>>>>> origin/master
 }
