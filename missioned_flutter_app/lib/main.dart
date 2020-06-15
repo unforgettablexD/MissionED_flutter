@@ -13,22 +13,17 @@ void main() {
   ));
 }
 
-class MyApp extends StatefulWidget {
-  @override
-  MyAppState createState() => MyAppState();
-}
-
-class MyAppState extends State<MyApp> {
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return SplashScreen(
-      seconds: 10,
-      backgroundColor: Colors.white,
-      image: Image.asset('assets/images/output-onlinepngtools (88).png'),
-      photoSize: 150,
-      navigateAfterSeconds: introduction1(),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'MissionED',
+      theme: ThemeData(
+        primaryColor: Colors.indigo,
+      ),
+      home: introduction1(),
     );
-    // TODO: implement build
   }
 }
 
@@ -82,13 +77,11 @@ class _introduction2State extends State<introduction2> {
           // Important: Remove any padding from the ListView.
           padding: EdgeInsets.zero,
           children: <Widget>[
-            Container(
-              height: 140,
-              decoration: BoxDecoration(
-                  image: DecorationImage(
-                image: ExactAssetImage('assets/images/blank_profile_pic.png'),
-                fit: BoxFit.cover,
-              )),
+            UserAccountsDrawerHeader(
+              accountName: Text('Username'),
+              accountEmail: Text('example@mail.com'),
+              currentAccountPicture:
+                  Image.asset('assets/images/blank_profile_pic.png'),
             ),
             ListTile(
               title: Text('Item 1'),
